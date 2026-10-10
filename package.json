@@ -1,0 +1,17 @@
+{
+  "name": "saas-metrics-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-tenant SaaS metrics dashboard with separate React frontend and Express API",
+  "scripts": {
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently -n API,WEB -c yellow,orange \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "start:backend": "npm --prefix backend start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
